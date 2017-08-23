@@ -1,59 +1,53 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        cuckoo
-      </h1>
-      <h2 class="subtitle">
-        Alive Fish
-      </h2>
-      <div class="links">
-        <v-btn outline class="indigo--text">Documentation</v-btn>
-        <v-btn round primary dark>GitHub</v-btn>
-      </div>
+    <div id="links-wrapper">
+      <v-layout row wrap>
+        <v-flex xs6><logo/></v-flex>
+        <v-flex xs6>
+          <v-card v-for="m in menus" :key="m.label" class="mb-3">
+            <v-card-title>
+              <a :href="m.path" class="title grey--text text--darken-1">{{ m.label }}</a>
+            </v-card-title>
+          </v-card>
+        </v-flex>
+      </v-layout>
     </div>
-  </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'blank',
   components: {
     Logo
+  },
+
+  data () {
+    return {
+      menus: []
+    }
+  },
+
+  created () {
+    this.menus = [{
+      label: 'Blog',
+      path: '/blog'
+    }, {
+      label: 'Github',
+      path: 'http://github.com/wi-cuckoo'
+    }, {
+      label: 'Resume',
+      path: '/resume'
+    }]
   }
 }
 </script>
 
-<style>
-.container
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.title
-{
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle
-{
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.links
-{
-  padding-top: 15px;
-}
+<style scoped>
+  #links-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    width: 600px;
+  }
 </style>
