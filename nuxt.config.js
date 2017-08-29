@@ -1,19 +1,25 @@
-
+const axios = require('axios')
 const { join } = require('path')
+const fs = require('fs')
+const loaders = require('./config/extend_loader.js')
+
+// console.log('shit', fs.readdirSync(join(__dirname, 'content/blog')))
+// var blogs = fs.readdirSync(join(__dirname, 'content/blog'))
+// blogs = blogs.map( el => el.split('.')[0].toLocaleLowerCase())
 
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'cuckoo',
+    title: 'wi-cuckoo',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Alive Fish' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }
     ]
   },
   /*
@@ -29,12 +35,7 @@ module.exports = {
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        config.module.rules.push(loaders.lint_loader)
       }
     },
     /*
@@ -42,6 +43,17 @@ module.exports = {
     */
     vendor: ['vuetify']
   },
+
+  /*
+  ** dynamic route
+  */
+  // generate: {
+  //   routes: []
+  // },
+  /*
+  ** Module
+  */
+  modules: ['nuxtent'],
 
   plugins: ['~plugins/vuetify.js'],
   css: [

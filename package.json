@@ -8,12 +8,14 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "HOST=wi-cuckoo.io PORT=80 NODE_ENV=production nuxtent generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0-rc3",
+    "@nuxtjs/axios": "^2.1.0",
+    "@nuxtjs/markdownit": "^1.1.0",
+    "nuxt": "^1.0.0-rc6",
     "nuxtent": "^0.2.73",
     "vuetify": "^0.14.11"
   },
