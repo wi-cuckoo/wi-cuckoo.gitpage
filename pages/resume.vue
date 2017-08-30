@@ -6,7 +6,6 @@
         <nuxt-link :to="'/blog' + project.permalink">{{  project.title }}</nuxt-link>
       </li>
     </ul>
-    <nuxt-child />
   </section>
 </template>
 

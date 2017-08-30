@@ -19,7 +19,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Alive Fish' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.png' }
     ]
   },
   /*
@@ -47,9 +47,15 @@ module.exports = {
   /*
   ** dynamic route
   */
-  // generate: {
-  //   routes: []
-  // },
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '/blog/:slug',
+        component: resolve(__dirname, 'pages/blog/_slug.vue')
+      })
+    }
+  },
   /*
   ** Module
   */
