@@ -5,7 +5,7 @@
   "author": "Louis Wei <ypliuwei@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "HOST=0.0.0.0 nuxt",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "HOST=wi-cuckoo.io PORT=80 NODE_ENV=production nuxtent generate",

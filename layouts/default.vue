@@ -1,13 +1,14 @@
 <template>
   <div>
-    <v-app>
-      <v-toolbar class="transparent elevation-0" light>
-        <!-- <v-toolbar-logo src="/img/favicon.png"></v-toolbar-logo> -->
-        <v-btn flat nuxt>Wi</v-btn>
+    <v-app light>
+      <v-toolbar class="white elevation-0 pl-4 pr-4" light>
+        <v-btn icon href="/">
+          <v-icon medium>home</v-icon>
+        </v-btn>
+        <v-toolbar-title class="dark--text ml-4">Wi</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>
-          <v-btn flat>Link One</v-btn>
-          <v-btn flat>Link One</v-btn>
+          <v-btn flat href="/blog">Blog</v-btn>
         </v-toolbar-items>
       </v-toolbar>
       <nuxt/>
