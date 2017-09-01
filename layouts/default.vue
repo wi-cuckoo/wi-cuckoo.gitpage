@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app light>
-      <v-toolbar class="white elevation-0 pl-4 pr-4" light>
+      <v-toolbar class="white elevation-0 pl-1 pr-1" light>
         <v-btn icon href="/">
           <v-icon medium>home</v-icon>
         </v-btn>

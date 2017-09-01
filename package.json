@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "HOST=wi-cuckoo.io PORT=80 NODE_ENV=production nuxtent generate",
+    "generate": "NODE_ENV=production nuxtent generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },

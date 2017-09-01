@@ -7,13 +7,13 @@ module.exports = {
     ['blog', {
       page: '/blog/_slug',
       permalink: "/:slug",
-      generate: ['get', 'getAll'],
+      generate: ['get', 'getAll', 'getOnly', 'query'],
       isPost: false
     }]
   ],
   api: {
    	baseURL: process.env.NODE_ENV === 'production'
-	    ? 'http://wi-cuckoo.io'
+	    ? 'http://wi-cuckoo.github.io'
 	    : 'http://localhost:3000'
  	}
 }

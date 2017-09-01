@@ -1,8 +1,11 @@
 <template>
-  <section class="content-container">
-    <h1 class="post-title"> {{ post.title || 'Nobody'}} </h1>
-    <nuxtent-body :body="post.body" />
-  </section>
+  <v-layout white class="pl-3 pr-3">
+    <section class="content-container">
+      <h1 class="post-title"> {{ post.title}} </h1>
+      <p class="display-6">{{ post._date }}</p>
+      <nuxtent-body :body="post.body" />
+    </section>
+  </v-layout>
 </template>
 
 <script>
@@ -21,7 +24,7 @@
   .content-container
   {
     width: 38rem;
-    margin: 0 auto
+    margin: 30px auto
   }
   .post-title
   {
