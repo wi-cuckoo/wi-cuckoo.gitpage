@@ -16,8 +16,8 @@
     "@nuxtjs/axios": "^2.1.0",
     "@nuxtjs/markdownit": "^1.1.0",
     "nuxt": "^1.0.0-rc6",
-    "nuxtent": "^0.2.73",
-    "vuetify": "^0.14.11"
+    "nuxtent": "^0.2.77",
+    "vuetify": "^0.15"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

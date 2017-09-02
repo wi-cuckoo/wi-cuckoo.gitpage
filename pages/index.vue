@@ -1,16 +1,10 @@
 <template>
+  <v-layout class="white">
     <v-container fluid class="page-container pa-0">
-      <v-toolbar class="white elevation-0 pl-4 pr-4" light>
-        <v-toolbar-title class="dark--text ml-4">Wi</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn flat href="/blog">Blog</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
       <v-card class="center-wrapper">
-        
       </v-card>
     </v-container>
+  </v-layout>
 </template>
 
 <script>

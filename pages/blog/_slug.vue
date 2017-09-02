@@ -1,5 +1,5 @@
 <template>
-  <v-layout white class="pl-3 pr-3">
+  <v-layout white class="pl-3 pr-3 mt-5">
     <section class="content-container">
       <h1 class="post-title"> {{ post.title}} </h1>
       <p class="display-6">{{ post._date }}</p>
@@ -12,11 +12,7 @@
   export default {
     asyncData: async ({ app, params, payload }) => ({
       post: await app.$content('/blog').get(params.slug) || payload
-    }),
-
-    created () {
-      // md = require('~content/Hello.md')
-    }
+    })
   }
 </script>
 
