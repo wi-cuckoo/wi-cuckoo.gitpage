@@ -1,20 +1,27 @@
 <template>
   <div>
-    <v-app light fill-height>
+    <v-app light toolbar>
       <v-toolbar class="white elevation-0 pl-1 pr-1" fixed light>
-        <v-btn icon href="/">
-          <v-icon medium>home</v-icon>
-        </v-btn>
-        <v-toolbar-title class="dark--text ml-4">Wi</v-toolbar-title>
+        <v-avatar class="blue" size="32px">
+           <img src="/img/favicon.png" alt="Wi">
+        </v-avatar>
         <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn flat href="/blog">Blog</v-btn>
-        </v-toolbar-items>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       </v-toolbar>
       <nuxt/>
     </v-app>
   </div>
 </template>
+
+<script type="babel">
+  export default {
+    data () {
+      return {
+        drawer: false
+      }
+    }
+  }
+</script>
 
 <style>
 html

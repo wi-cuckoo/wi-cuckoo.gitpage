@@ -14,6 +14,6 @@ module.exports = {
   api: {
    	baseURL: process.env.NODE_ENV === 'production'
 	    ? 'http://wi-cuckoo.github.io'
-	    : 'http://localhost:3000'
+	    : 'http://0.0.0.0:3000'
  	}
 }

@@ -1,7 +1,7 @@
 <template>
   <v-layout white class="pl-3 pr-3 mt-5">
     <section class="content-container">
-      <h1 class="post-title"> {{ post.title}} </h1>
+      <h1 class="post-title light-blue--text"> {{ post.title}} </h1>
       <p class="display-6">{{ post._date }}</p>
       <nuxtent-body :body="post.body" />
     </section>
@@ -20,7 +20,7 @@
   .content-container
   {
     width: 38rem;
-    margin: 30px auto
+    margin: 40px auto
   }
   .post-title
   {

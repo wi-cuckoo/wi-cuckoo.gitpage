@@ -1,8 +1,9 @@
 <template>
   <v-layout class="white">
-    <v-container fluid class="page-container pa-0">
-      <v-card class="center-wrapper">
-      </v-card>
+    <v-container fluid>
+      <div class="center-wrapper">
+        <h2 class="text-xs-center">Louis Wei</h2>
+      </div>
     </v-container>
   </v-layout>
 </template>
@@ -43,11 +44,5 @@ export default {
     position: absolute;
     top: 25%;
     width: 100%;
-  }
-
-  .page-container {
-    /*background-image: url(/img/index.jpg);*/
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
   }
 </style>

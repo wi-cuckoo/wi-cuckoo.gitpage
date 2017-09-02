@@ -1,12 +1,7 @@
 <template>
-  <section class="container">
-    <h1> Blogs </h1>
-     <ul>
-       <li v-for="project in projects">
-        <nuxt-link :to="'/blog' + project.permalink">{{  project.title }}</nuxt-link>
-      </li>
-    </ul>
-  </section>
+  <v-layout>
+	  <section class="container"></section>
+  </v-layout>
 </template>
 
 <script>

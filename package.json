@@ -5,7 +5,7 @@
   "author": "Louis Wei <ypliuwei@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "NODE_ENV=production nuxtent generate",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "cross-env": "^5.0.5",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",

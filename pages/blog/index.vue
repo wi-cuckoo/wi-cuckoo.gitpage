@@ -1,7 +1,7 @@
 <template>
   <v-layout class="mt-5 white">
     <section class="container">
-      <div class="display-2 text--darken-1 text-xs-center ma-5">Blog</div>
+      <div class="display-2 blue--text darken-3 text-xs-center ma-5">Blog</div>
       <v-divider dark></v-divider>
       <v-list three-line>
         <template v-for="blog in blogs">
@@ -59,5 +59,6 @@
 
   .larger-title {
     height: auto;
+    white-space: normal;
   }
 </style>
