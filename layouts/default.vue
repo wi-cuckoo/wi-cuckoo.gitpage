@@ -1,13 +1,6 @@
 <template>
   <div>
     <v-app light toolbar>
-      <!-- <v-toolbar class="white elevation-0 pl-1 pr-1" fixed light>
-        <v-avatar class="blue" size="32px">
-           <img src="/img/favicon.png" alt="Wi">
-        </v-avatar>
-        <v-spacer></v-spacer>
-        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      </v-toolbar> -->
       <v-navigation-drawer temporary v-model="drawer" right>
         <v-list class="pa-1">
           <v-list-tile avatar>

@@ -1,5 +1,5 @@
 <template>
-  <v-layout white class="pl-3 pr-3 mt-5">
+  <v-layout white class="pl-3 pr-3">
     <section class="content-container">
       <h1 class="post-title light-blue--text"> {{ post.title}} </h1>
       <p class="display-6">{{ post._date }}</p>
@@ -19,6 +19,7 @@
 <style scoped>
   .content-container
   {
+    padding: 4em 0 0 0;
     width: 38rem;
     margin: 40px auto
   }

@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="mt-5 white">
+  <v-layout class="white">
     <section class="container">
       <div class="display-2 blue--text darken-3 text-xs-center ma-5">Blog</div>
       <v-divider dark></v-divider>
@@ -26,7 +26,7 @@
   export default {
     async asyncData ({ app }) {
       return {
-        total: await app.$content('/blog').query({ exclude: 'body,meta.date' }).getAll()
+        total: await app.$content('/blog').getAll()
       }
     },
 
@@ -41,10 +41,14 @@
         return Math.ceil(this.total.length / PAGE_SIZE)
       },
 
+      total_shorten () {
+        return this.total.map(el => ({ title: el.title, _date: el._date, permalink: el.permalink }))
+      },
+
       blogs () {
         let start = 0 + PAGE_SIZE * (this.page - 1)
         let end = start + PAGE_SIZE
-        return this.total.slice(start, end)
+        return this.total_shorten.slice(start, end)
       }
     }
   }
@@ -54,7 +58,7 @@
   .container{
     margin: 0 auto;
     max-width: 730px;
-    padding: 0 1.5rem;
+    padding: 4em 0 0 0;
   }
 
   .larger-title {
