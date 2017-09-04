@@ -15,4 +15,10 @@ const mk_loader = {
 	exclude: /(node_modules)/
 }
 
-module.exports = {lint_loader, mk_loader}
+const json_loader = {
+	test: /\.json$/,
+	loader: 'json-loader',
+	exclude: /(node_modules)/
+}
+
+module.exports = {lint_loader, mk_loader, json_loader}

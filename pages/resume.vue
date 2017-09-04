@@ -1,45 +1,30 @@
 <template>
   <section id="cv-container">
     <!-- profile -->
-    <v-container class="grid-list-xl mt-5">
-      <v-layout row wrap>
-        <v-flex xs12 md4 class="text-xs-center">
-          <v-avatar size="130px">
-            <img src="/img/profile.jpg" alt="Profile">
-          </v-avatar>
-        </v-flex>
-        <v-flex xs12 md8 justify-center class="text-xs-center text-md-left">
-          <v-layout row wrap>
-            <v-flex xs12 class="py-1"><h1 class="mb-0 display-3 text--darken-1">Liu Wei</h1></v-flex>
-            <v-flex xs12 class="py-1">
-              <div class="mb-0">
-                <p class="title grey--text text--darken-1">Tel: (+86) 137 5432 9131</p>
-                <p class="title grey--text text--darken-1">Email： yp_liuwei@live.com</p>
-              </div>
-            </v-flex>
-          </v-layout>
-        </v-flex>
-      </v-layout>
-    </v-container>
-    <v-container class="grid-list-xl">
-      <hr/>
-    </v-container>
+    <v-profile
+    :name="name"
+    :phone="phone"
+    :email="email"
+    portrait="/img/profile.jpg"
+    ></v-profile>
+    <v-container class="grid-list-xl"><hr/></v-container>
     <!-- experience -->
-    <v-container class="justify-width">
-      <div class="headline grey--text pl-3">Professional Experience</div>
-      <v-list>
-        <v-list-tile>
-          <div class="title">贝贝网 （2016/7-至今）</div>
-        </v-list-tile>
-      </v-list>
-    </v-container>
+    <v-experience :experience="experience"></v-experience>
   </section>
 </template>
 
 <script>
+  import VProfile from '~/components/resume/profile'
+  import VExperience from '~/components/resume/experience'
   export default {
     async asyncData ({ app }) {
-      return {}
+      let resume = await require('~/static/resume.json')
+      return resume
+    },
+
+    components: {
+      VProfile,
+      VExperience
     }
   }
 </script>

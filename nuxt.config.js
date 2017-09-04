@@ -34,6 +34,7 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
+      config.module.rules.push(loaders.json_loader)
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push(loaders.lint_loader)
       }
