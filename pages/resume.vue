@@ -21,8 +21,10 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-container class="grid-list-xl">
+      <hr/>
+    </v-container>
     <!-- experience -->
-    <hr/>
     <v-container class="justify-width">
       <div class="headline grey--text pl-3">Professional Experience</div>
       <v-list>
@@ -51,7 +53,7 @@
   hr
   {
     display: block;
-    width: 65%;
+    width: 90%;
     margin: 40px auto 34px;
     border: 0 none;
     border-top: 3px solid #dededc;
