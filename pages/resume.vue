@@ -10,12 +10,21 @@
     <v-container class="grid-list-xl"><hr/></v-container>
     <!-- experience -->
     <v-experience :experience="experience"></v-experience>
+    <v-container class="grid-list-xl"><hr/></v-container>
+    <!-- education -->
+    <v-education :models="education"></v-education>
+    <v-container class="grid-list-xl"><hr/></v-container>
+    <!-- skills -->
+    <v-skill :skills="skills"></v-skill>
   </section>
 </template>
 
 <script>
+  import VSkill from '~/components/resume/skill'
   import VProfile from '~/components/resume/profile'
   import VExperience from '~/components/resume/experience'
+  import VEducation from '~/components/resume/education'
+  
   export default {
     async asyncData ({ app }) {
       let resume = await require('~/static/resume.json')
@@ -23,7 +32,9 @@
     },
 
     components: {
+      VSkill,
       VProfile,
+      VEducation,
       VExperience
     }
   }
@@ -32,14 +43,14 @@
 <style scoped>
   #cv-container
   {
-    padding: 4em 0 0 0;
+    padding: 4em 0 4em 0;
   }
 
   hr
   {
     display: block;
     width: 90%;
-    margin: 40px auto 34px;
+    margin: 30px auto 24px;
     border: 0 none;
     border-top: 3px solid #dededc;
   }

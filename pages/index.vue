@@ -2,7 +2,7 @@
   <v-layout class="white">
     <v-container fluid>
       <div class="center-wrapper">
-        <h2 class="text-xs-center">Louis Wei</h2>
+        <h2 class="text-xs-center">此时此刻的Bug，二十来岁的我</h2>
       </div>
     </v-container>
   </v-layout>

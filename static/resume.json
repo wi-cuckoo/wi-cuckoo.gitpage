@@ -6,7 +6,37 @@
 		{
 			"company": "贝贝网 （2016/7-至今）",
 			"position": "基础研发工程师",
-			"content": ""
+			"projects": [
+				{
+					"name": "监控系统",
+					"intro": "监控架构采用 Influxdb 作为核心存储，涉及业务监控、基础监控、中间件监控及应用性能监控等",
+					"response": "独立负责项目中 Web 的开发，从零开始构建系统的 Web 端。包括原型图设计，数据库表设计，API 编写，调试，到最后预发布及上线。工作集中在时序数据可视化，多维度展示，各类告警规则设置，用户权限系统等等。同时参与数据采集，告警脚本开发工作。"
+				}, {
+					"name": "Influxdb Proxy",
+					"intro": "",
+					"response": ""
+				}
+			]
+		}
+	],
+	"education": [
+		{
+			"university": "华中科技大学",
+			"time": "2012/9 - 2016/6",
+			"major": "材料科学与工程学院",
+			"degree": "本科"
+		}
+	],
+	"skills": [
+		{
+			"label": "Go",
+			"value": 80
+		}, {
+			"label": "Vue",
+			"value": 70
+		}, {
+			"label": "Python",
+			"value": 75
 		}
 	]
 }
