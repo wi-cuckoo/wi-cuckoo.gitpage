@@ -44,6 +44,8 @@
   #cv-container
   {
     padding: 4em 0 4em 0;
+    margin: 0 auto;
+    max-width: 900px;
   }
 
   hr
