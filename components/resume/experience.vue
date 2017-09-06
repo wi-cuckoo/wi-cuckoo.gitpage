@@ -3,7 +3,7 @@
     <div class="title grey--text pl-3 mb-3">Professional Experience</div>
     <div v-for="e in experience" class="exp-section pl-3">
       <div class="headline light-blue--text accent-4">{{ e.position }}
-        <span class="subheading grey--text dark-4"> ———— {{ e.company }}</span>
+        <span class="subheading grey--text dark-4"> — {{ e.company }}</span>
       </div>
       <div class="projects-content">
         <dl class="pl-4">
