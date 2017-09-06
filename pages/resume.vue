@@ -16,11 +16,15 @@
     <v-container class="grid-list-xl"><hr/></v-container>
     <!-- skills -->
     <v-skill :skills="skills"></v-skill>
+    <v-container class="grid-list-xl"><hr/></v-container>
+    <!-- dream -->
+    <v-epilogue :epilogue="epilogue"></v-epilogue>
   </section>
 </template>
 
 <script>
   import VSkill from '~/components/resume/skill'
+  import VEpilogue from '~/components/resume/epilogue'
   import VProfile from '~/components/resume/profile'
   import VExperience from '~/components/resume/experience'
   import VEducation from '~/components/resume/education'
@@ -34,6 +38,7 @@
     components: {
       VSkill,
       VProfile,
+      VEpilogue,
       VEducation,
       VExperience
     }

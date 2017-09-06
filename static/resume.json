@@ -1,10 +1,10 @@
 {
-	"name": "Liu Wei",
+	"name": "刘 伟",
 	"phone": "(+86) 137 5432 9131",
 	"email": "yp_liuwei@live.com",
 	"experience": [
 		{
-			"company": "贝贝网 （2016/7-至今）",
+			"company": "贝贝网 （2016/7 - 至今）",
 			"position": "基础研发工程师",
 			"projects": [
 				{
@@ -23,14 +23,14 @@
 		{
 			"university": "华中科技大学",
 			"time": "2012/9 - 2016/6",
-			"major": "材料科学与工程学院",
+			"major": "电子封装技术",
 			"degree": "本科"
 		}
 	],
 	"skills": [
 		{
 			"label": "Go",
-			"value": 80
+			"value": 60
 		}, {
 			"label": "Vue",
 			"value": 70
@@ -38,5 +38,6 @@
 			"label": "Python",
 			"value": 75
 		}
-	]
+	],
+	"epilogue": "成长为一名云计算专家，迈入互联网的下一站"
 }

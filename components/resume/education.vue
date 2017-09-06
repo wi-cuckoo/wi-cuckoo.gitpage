@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'resume-experience',
+    name: 'resume-education',
 
     props: {
       models: Array
