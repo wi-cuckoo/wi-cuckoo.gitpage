@@ -26,7 +26,7 @@
   export default {
     async asyncData ({ app }) {
       return {
-        total: await app.$content('/blog').getAll()
+        total: await app.$content('/blog').query({exclude: 'body'}).getAll()
       }
     },
 
@@ -41,14 +41,10 @@
         return Math.ceil(this.total.length / PAGE_SIZE)
       },
 
-      total_shorten () {
-        return this.total.map(el => ({ title: el.title, _date: el._date, permalink: el.permalink }))
-      },
-
       blogs () {
         let start = 0 + PAGE_SIZE * (this.page - 1)
         let end = start + PAGE_SIZE
-        return this.total_shorten.slice(start, end)
+        return this.total.slice(start, end)
       }
     }
   }
